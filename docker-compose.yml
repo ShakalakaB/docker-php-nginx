@@ -8,9 +8,6 @@ services:
     container_name: app
     restart: unless-stopped
     tty: true
-    environment:
-      SERVICE_NAME: app
-      SERVICE_TAGS: dev
     networks:
       - app-network
     expose:
