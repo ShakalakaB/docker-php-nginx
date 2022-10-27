@@ -3,6 +3,9 @@
 print "<h1 style='text-align: center'>Hello</h1>";
 
 print "<h1 style='text-align: center'>Writing log...</h1>";
+
+print "Current user: " . shell_exec( 'whoami' );
+
 if (!is_dir("log")) {
     mkdir("log");
 }

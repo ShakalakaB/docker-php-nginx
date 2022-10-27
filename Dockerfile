@@ -1,3 +1,8 @@
 FROM     php:7.4-fpm
-ADD      ./  /var/www
+
 WORKDIR  /var/www
+
+COPY      ./  /var/www
+
+USER root
+
