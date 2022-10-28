@@ -4,7 +4,8 @@ print "<h1 style='text-align: center'>Hello</h1>";
 
 print "<h1 style='text-align: center'>Writing log...</h1>";
 
-print "Current user: " . shell_exec( 'whoami' );
+$user = shell_exec('whoami');
+print "<h1 style='text-align: center'>Current user: {$user}</h1>";
 
 if (!is_dir("log")) {
     mkdir("log");
