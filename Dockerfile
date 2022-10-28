@@ -1,8 +1,8 @@
-FROM     php:7.4-fpm
+FROM php:7.4-fpm
 
-WORKDIR  /var/www
+WORKDIR /var/www
 
-COPY      ./  /var/www
+ADD ./  /var/www
 
-USER root
+RUN chown www-data:www-data /var/www
 

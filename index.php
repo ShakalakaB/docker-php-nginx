@@ -10,7 +10,9 @@ if (!is_dir("log")) {
     mkdir("log");
 }
 
-error_log("Test writing permission\n", 3, "./log/error.log");
-
-print "<h1 style='text-align: center'>Successfully Written</h1>";
+if (error_log("Test writing permission\n", 3, "./log/error.log")) {
+    print "<h1 style='text-align: center'>Written Succeeded</h1>";
+} else {
+    print "<h1 style='text-align: center'>Written Failed</h1>";
+}
 

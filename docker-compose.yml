@@ -9,7 +9,7 @@ services:
     restart: unless-stopped
     tty: true
     volumes:
-      - ./www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./:/var/www
     networks:
       - app-network
     expose:
