@@ -12,9 +12,9 @@ ENV GROUP_NAME=ec2-user
 
 WORKDIR /var/www
 
-RUN addgroup -g ${GID} --system ${GROUP_NAME}
+RUN addgroup -gid ${GID} --system ${GROUP_NAME}
 #RUN addgroup -g 1000 --system ec2-user
-RUN adduser -G ${GROUP_NAME} --system -D -s /bin/sh -u ${UID} ${USER_NAME}
+RUN adduser --system --group ${GROUP_NAME} -shell /bin/sh --uid ${UID} --disabled-password ${USER_NAME}
 #RUN #adduser -G ec2-user --system -D -s /bin/sh -u 1000 ec2-user
 
 ADD ./  /var/www
