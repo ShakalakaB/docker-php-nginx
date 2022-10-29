@@ -3,7 +3,15 @@ services:
 
   #PHP Service
   app:
-    image: aldora/docker-php-nginx
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - UID=${UID:-1000}
+        - USER_NAME=${USER_NAME:-ec2-user}
+        - GID=${GID:-1000}
+        - GROUP_NAME=${GROUP_NAME:-ec2-user}
+
     platform: linux/amd64
     container_name: app
     restart: unless-stopped
