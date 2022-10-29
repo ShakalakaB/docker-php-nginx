@@ -16,4 +16,3 @@ ADD ./src/  /var/www
 RUN chown -R ${USER_NAME}:${GROUP_NAME} /var/www
 
 USER ${USER_NAME}
-
