@@ -14,7 +14,7 @@ WORKDIR /var/www
 
 RUN addgroup -gid ${GID} --system ${GROUP_NAME}
 #RUN addgroup -g 1000 --system ec2-user
-RUN adduser --system --group ${GROUP_NAME} -shell /bin/sh --uid ${UID} --disabled-password ${USER_NAME}
+RUN adduser --system --ingroup ${GROUP_NAME} -shell /bin/sh --uid ${UID} --disabled-password ${USER_NAME}
 #RUN #adduser -G ec2-user --system -D -s /bin/sh -u 1000 ec2-user
 
 ADD ./  /var/www
