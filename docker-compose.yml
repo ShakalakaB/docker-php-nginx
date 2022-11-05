@@ -6,11 +6,6 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-      args:
-        - UID=${UID}
-        - USER_NAME=${USER_NAME}
-        - GID=${GID}
-        - GROUP_NAME=${GROUP_NAME}
     platform: linux/amd64
     container_name: app
     restart: unless-stopped
